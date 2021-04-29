@@ -8,7 +8,6 @@ const rtLogin = require('./routes/rtLogin')
 //middlewares
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-app.use(express.json())
 
 //session:
 app.use(session({ //gestión de sesiones
