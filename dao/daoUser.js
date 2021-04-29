@@ -4,7 +4,9 @@ let daoUser={}
 
 daoUser.create=(user)=>{
     return new Promise((resolved)=>{
-        db.users.create(user).then(data=>resolved(data))
+        db.users.create(user)
+            .then(data=>resolved(data))
+            .catch(err=>resolved(err))
     })
 }
 
@@ -16,7 +18,7 @@ daoUser.findAll=()=>{
 
 daoUser.findByEmail=(email)=>{
     return new Promise((resolved)=>{
-        db.users.findAll({
+        db.users.findOne({
             where: {
               email: email
             }
@@ -26,7 +28,7 @@ daoUser.findByEmail=(email)=>{
 
 daoUser.findById=(id)=>{
     return new Promise((resolved)=>{
-        db.users.findAll({
+        db.users.findOne({
             where: {
               id: id
             }
