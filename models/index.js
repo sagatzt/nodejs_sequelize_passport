@@ -11,5 +11,5 @@ db.users=require("./user")(sequelize,Sequelize)
 
 //associations
 
-db.sequelize.sync()
+//db.sequelize.sync()
 module.exports=db
