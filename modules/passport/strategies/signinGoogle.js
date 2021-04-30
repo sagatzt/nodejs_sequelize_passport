@@ -3,8 +3,8 @@ var daoUsers = require('../../../dao/daoUser')
 
 module.exports = function (passport) {
     passport.use('signin-google', new GoogleStrategy({
-        clientID: '96185964168-mqkvjqo2m9r20aed53c3istd2gijrirk.apps.googleusercontent.com',
-        clientSecret: 'GGxadGG9cSU279h2px272Cpn',
+        clientID: 'tu ID de app',
+        clientSecret: 'tu secret',
         callbackURL: 'http://localhost:8081/login/google/callback'
     }, (accessToken, refreshToken, profile, done)=> {
         console.log(profile)
