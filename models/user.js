@@ -16,7 +16,6 @@ module.exports = (sequelize, Sequelize) => {
       password:{type: Sequelize.STRING},
       provider: {type: Sequelize.STRING},
       active: {type:Sequelize.BOOLEAN}
-    },{ define: {timestamps: false }
     },{
       indexes: [
         {
